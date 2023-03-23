@@ -1,26 +1,12 @@
-#include <stdio.h>
 #include "main.h"
 
+
 /**
- * main - Test the _isalpha() function
- *
- * Return: Always 0.
+ * _isalpha - checks for alphabetic character
+ * @c: the character to be checked
+ * Return: 1 if c is a letter, 0 otherwise
  */
-int main(void)
+	int _isalpha(int c)
 {
-int is_alpha;
-
-is_alpha = _isalpha('H');
-printf("Is 'H' an alphabetic character? %s\n", is_alpha ? "Yes" : "No");
-
-is_alpha = _isalpha('o');
-printf("Is 'o' an alphabetic character? %s\n", is_alpha ? "Yes" : "No");
-
-is_alpha = _isalpha(108);
-printf("Is 108 an alphabetic character? %s\n", is_alpha ? "Yes" : "No");
-
-is_alpha = _isalpha(';');
-printf("Is ';' an alphabetic character? %s\n", is_alpha ? "Yes" : "No");
-
-return (0);
+		return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
